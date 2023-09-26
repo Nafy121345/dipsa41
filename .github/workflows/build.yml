@@ -23,7 +23,6 @@ jobs:
           message: "Latest release"
       - name: Release
         uses: ncipollo/release-action@v1
-        id: "v1.0"
         with:
           skipIfReleaseExists: true
           tags: "latest"
