@@ -23,9 +23,9 @@ jobs:
           message: "Latest release"
       - name: Release
         uses: ncipollo/release-action@v1
+        id: "v1.0"
         with:
           skipIfReleaseExists: true
-          branches: 'v1.0'
           tags: "latest"
           artifacts: "release.tar.gz,foo/*.txt"
           bodyFile: "body.md"
@@ -37,6 +37,7 @@ jobs:
         run: railway up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+
       - name: Send custom JSON data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.24.0
