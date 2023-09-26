@@ -26,7 +26,6 @@ jobs:
         with:
           skipIfReleaseExists: true
           branches: 'v1.0'
-          tag: "latest"
           artifacts: "release.tar.gz,foo/*.txt"
           bodyFile: "body.md"
 
@@ -71,11 +70,11 @@ jobs:
                       },
                       {
                         "type": "mrkdwn",
-                        "text": "*Repository:*\n<https://github.com/Nafy121345/cicd.git>"
+                        "text": "*Repository:*\n<https://github.com/Nafy121345/dipsa41.git>"
                       },
                       {
                         "type": "mrkdwn",
-                        "text": "*Deployment:*\n<https://cicd-production.up.railway.app>"
+                        "text": "*Deployment:*\n<https://dipsa41-production.up.railway.app>"
                       }
                     ]
                   },
@@ -83,7 +82,7 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": " <https://cicd-production.up.railway.app|Open Application>"
+                      "text": " <https://dipsa41-production.up.railway.app|Open Application>"
                     }
                   }
                 ]
