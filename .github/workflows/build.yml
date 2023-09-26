@@ -37,3 +37,57 @@ jobs:
         run: railway up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      - name: Send custom JSON data to Slack workflow
+        id: slack
+        uses: slackapi/slack-github-action@v1.24.0
+        with:
+          payload: |
+              {
+                "blocks": [
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "*DipSA41C CI/CD Assignment Submission*"
+                    }
+                  },
+                  {
+                    "type": "divider"
+                  },
+                  {
+                    "type": "section",
+                    "fields": [
+                      {
+                        "type": "mrkdwn",
+                        "text": "*Name:*\nFan yazhuoting"
+                      },
+                      {
+                        "type": "mrkdwn",
+                        "text": "*Metriculation:*\nA0287202J"
+                      },
+                      {
+                        "type": "mrkdwn",
+                        "text": "*Email:*\nE1280877@u.nus.edu"
+                      },
+                      {
+                        "type": "mrkdwn",
+                        "text": "*Repository:*\n<https://github.com/Nafy121345/cicd.git>"
+                      },
+                      {
+                        "type": "mrkdwn",
+                        "text": "*Deployment:*\n<https://cicd-production.up.railway.app>"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": " <https://cicd-production.up.railway.app|Open Application>"
+                    }
+                  }
+                ]
+              }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
