@@ -25,7 +25,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           skipIfReleaseExists: true
-          tags: "latest"
+          tag: "latest"
           artifacts: "release.tar.gz,foo/*.txt"
           bodyFile: "body.md"
 
