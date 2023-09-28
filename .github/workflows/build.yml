@@ -39,7 +39,7 @@ jobs:
 
       - name: Get Repository URL
         id: repo_url
-        run: echo "::set-output name=url::https://github.com/${{ github.repository }}.git"
+        run: echo "::set-output name=url::https://github.com/${{ github.repository }}"
 
       - name: Send custom JSON data to Slack workflow
         id: slack
