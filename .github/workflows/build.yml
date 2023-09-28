@@ -49,10 +49,10 @@ jobs:
               {
                 "blocks": [
                   {
-                    "type": "section",
+                    "type": "header",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "*DipSA41C CI/CD Assignment Submission*"
+                      "text": "DipSA41C CI/CD Assignment Submission"
                     }
                   },
                   {
