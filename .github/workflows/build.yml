@@ -83,7 +83,7 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": " <https://dipsa41-production.up.railway.app|Open Application>"
+                      "text": "${{ secrets.DE }}|Open Application>"
                     }
                   }
                 ]
