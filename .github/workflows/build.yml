@@ -75,7 +75,7 @@ jobs:
                       },
                       {
                         "type": "mrkdwn",
-                        "text": "*Deployment:*\n<https://dipsa41-production.up.railway.app>"
+                        "text": "*Deployment:*\n ${{ secrets.DE }}"
                       }
                     ]
                   },
