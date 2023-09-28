@@ -51,8 +51,9 @@ jobs:
                   {
                     "type": "header",
                     "text": {
-                      "type": "mrkdwn",
-                      "text": "DipSA41C CI/CD Assignment Submission"
+                      "type": "plain_text",
+                      "text": "DipSA41C CI/CD Assignment Submission",
+                      "emoji": true
                     }
                   },
                   {
